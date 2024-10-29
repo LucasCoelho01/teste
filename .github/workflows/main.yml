@@ -36,8 +36,8 @@ jobs:
     # Initialize Elastic Beanstalk environment (only needed once, you can remove after first setup)
     - name: Initialize Elastic Beanstalk Environment
       run: |
-        eb init -p Java teste  # Replace with your region and app name
-        eb use Teste-env  # Replace with your environment name
+        eb init -p java-17 --region us-east-1 teste  # Replace with your app name
+        eb use Teste-env
 
     # Deploy to Elastic Beanstalk
     - name: Deploy to AWS Elastic Beanstalk
